@@ -1,0 +1,21 @@
+@startuml
+autonumber
+actor "Pengunjung" as User
+participant "index.html\n(Homepage UI)" as UI
+participant "Form Validation\n(Browser Engine)" as Form
+participant "Event Handler\n(onsubmit)" as Event
+
+User -> UI : Mengakses Halaman Homepage
+UI --> User : Menampilkan Formulir Kontak & Masukan
+User -> UI : Menginputkan Nama, Email, Subjek, & Pesan
+User -> UI : Klik Tombol "Kirim Pesan"
+UI -> Form : Memeriksa Input (HTML5 Validation)
+
+alt Input Valid
+    Form -> Event : Jalankan event.preventDefault()
+    Event --> User : Tampilkan Notification Alert\n("Pesan Anda berhasil dikirim!")
+    Event -> UI : Reset / Pertahankan Halaman
+else Input Tidak Valid (Misal Email Kosong)
+    Form --> User : Tampilkan Pesan Peringatan Input
+end
+@enduml

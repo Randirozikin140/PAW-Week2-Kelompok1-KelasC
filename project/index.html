@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage - Review Jurnal UI/UX</title>
+    <!-- Menghubungkan ke file CSS di dalam folder css/ -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Ketentuan 1: Header dan Navigasi — Flexbox -->
+    <header class="navbar">
+      <div class="logo">
+        <span class="logo-text">UIUXReview</span>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#features">Fitur Utama</a></li>
+          <li><a href="#contact">Hubungi Kami</a></li>
+          <li><a href="landing-page.html" class="btn-nav">Review Jurnal</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Ketentuan 2: Hero Section — CSS Grid -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Platform Analisis & Review Jurnal UI/UX Terpercaya</h1>
+        <p>
+          Pelajari dan telaah wawasan mendalam mengenai penerapan
+          <em>User-Centered Design</em> (UCD), dampak keberhasilan bisnis, serta
+          optimalisasi antarmuka aplikasi web dan mobile.
+        </p>
+        <div class="hero-buttons">
+          <a href="landing-page.html" class="btn-primary">Baca Review Jurnal</a>
+          <a href="#contact" class="btn-secondary">Kirim Ulasan</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Highlight Utama Jurnal</h3>
+        <ul>
+          <li>
+            <strong>ROI UX:</strong> Potensi pengembalian investasi hingga
+            9.900%
+          </li>
+          <li>
+            <strong>Metodologi:</strong> Systematic Literature Review (SLR)
+          </li>
+          <li><strong>Studi Kasus:</strong> Analisis Antarmuka Tokopedia</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Ketentuan 3: Daftar Fitur — CSS Grid -->
+    <section id="features" class="features-section">
+      <h2 class="section-title">Fitur & Layanan Utama</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">🔍</div>
+          <h3>Systematic Review</h3>
+          <p>
+            Analisis komprehensif dari 15+ literatur ilmiah bereputasi
+            internasional mengenai UI/UX.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📊</div>
+          <h3>Metrik ROI & Bisnis</h3>
+          <p>
+            Kajian dampak desain antarmuka terhadap angka retensi pengguna dan
+            pendapatan bisnis.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">📱</div>
+          <h3>Multi-Platform Analysis</h3>
+          <p>
+            Evaluasi konsistensi desain UI/UX antara versi web desktop dan
+            aplikasi mobile.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">👥</div>
+          <h3>User-Centered Design</h3>
+          <p>
+            Penerapan kerangka kerja desain yang fokus pada kebutuhan dan
+            kenyamanan pengguna.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ketentuan 4: Form dan Input — Form Styling & Focus State -->
+    <section id="contact" class="contact-section">
+      <h2 class="section-title">Formulir Kontak & Masukan</h2>
+      <p class="section-subtitle">
+        Sampaikan pertanyaan atau tanggapan Anda mengenai hasil review jurnal
+        ini.
+      </p>
+
+      <!-- ✅ KODE BARU (Aman untuk Live Server & HTML Statis) -->
+      <form
+        class="contact-form"
+        action=""
+        method="GET"
+        onsubmit="
+          event.preventDefault();
+          alert('Pesan Anda berhasil dikirim!');
+        "
+      >
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Masukkan nama lengkap Anda"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="contoh: nama@email.com"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="subjek">Subjek Pesan</label>
+          <input
+            type="text"
+            id="subjek"
+            name="subjek"
+            placeholder="Masukkan subjek pesan"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Pesan / Masukan</label>
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="5"
+            placeholder="Tuliskan pesan atau ulasan Anda di sini..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Kirim Pesan</button>
+      </form>
+    </section>
+
+    <!-- Anggota Kelompok -->
+    <section class="team-section">
+      <h2 class="section-title">Tim Penyusun</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <h4>Randi Rozikin</h4>
+          <p>NIM: 20240140140</p>
+        </div>
+        <div class="team-card">
+          <h4>Fauzie Primarka</h4>
+          <p>NIM: 20240140106</p>
+        </div>
+        <div class="team-card">
+          <h4>Azam</h4>
+          <p>NIM: 20240140</p>
+        </div>
+        <div class="team-card">
+          <h4>Muhammad Ikhsanul Kahfi</h4>
+          <p>NIM: 20240140153</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2026 Kelompok - Pemrograman Aplikasi Web. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

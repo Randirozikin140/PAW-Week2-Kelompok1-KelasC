@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+actor "Pengunjung Website" as User
+
+rectangle "Website Review Jurnal UI/UX" {
+    usecase "Melihat Homepage" as UC1
+    usecase "Melihat Ringkasan & Review Jurnal" as UC2
+    usecase "Melihat Daftar Fitur Utama" as UC3
+    usecase "Mengisi & Mengirim Formulir Masukan" as UC4
+    usecase "Melihat Informasi Anggota Kelompok" as UC5
+    usecase "Mengakses Navigasi Antar Halaman" as UC6
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+@enduml

@@ -1,0 +1,41 @@
+@startuml
+class Homepage {
+    +String title
+    +renderHeroSection()
+    +renderFeaturesGrid()
+    +renderContactForm()
+}
+
+class LandingPage {
+    +String journalTitle
+    +String publication
+    +renderJournalAbout()
+    +renderStrengthsAndWeaknesses()
+}
+
+class ContactForm {
+    +String nama
+    +String email
+    +String subjek
+    +String pesan
+    +handleSubmit()
+}
+
+class TeamMember {
+    +String nama
+    +String nim
+    +displayInfo()
+}
+
+class StyleSheet {
+    +String flexLayout
+    +String gridLayout
+    +String mediaQueryMobile
+}
+
+Homepage "1" -- "1" ContactForm : berisi >
+Homepage "1" -- "4" TeamMember : menampilkan >
+LandingPage "1" -- "4" TeamMember : menampilkan >
+Homepage ..> StyleSheet : styled by
+LandingPage ..> StyleSheet : styled by
+@enduml

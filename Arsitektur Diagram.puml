@@ -1,0 +1,23 @@
+@startuml
+package "Client / Browser" {
+    [User / Visitor] as User
+}
+
+package "Project Directory Structure (Web Application)" {
+    component "index.html\n(Homepage)" as Homepage
+    component "landing-page.html\n(Journal Review)" as LandingPage
+    component "css/style.css\n(Flexbox, Grid, Form, Media Query)" as Style
+}
+
+package "Version Control System" {
+    database "GitHub Repository\n(PAW-Week3-Kelompok)" as GitHub
+}
+
+User --> Homepage : 1. Mengakses Web
+User --> LandingPage : 2. Navigasi Review Jurnal
+Homepage ..> Style : Imports
+LandingPage ..> Style : Imports
+Homepage --> GitHub : Pushed via Git
+LandingPage --> GitHub : Pushed via Git
+Style --> GitHub : Pushed via Git
+@enduml
