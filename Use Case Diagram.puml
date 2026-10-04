@@ -3,12 +3,12 @@ left to right direction
 actor "Pengunjung Website" as User
 
 rectangle "Website Review Jurnal UI/UX" {
-    usecase "Melihat Homepage" as UC1
-    usecase "Melihat Ringkasan & Review Jurnal" as UC2
+    usecase "Melihat Homepage & Highlight Jurnal" as UC1
+    usecase "Navigasi Antar Halaman (Home <-> Review)" as UC2
     usecase "Melihat Daftar Fitur Utama" as UC3
-    usecase "Mengisi & Mengirim Formulir Masukan" as UC4
-    usecase "Melihat Informasi Anggota Kelompok" as UC5
-    usecase "Mengakses Navigasi Antar Halaman" as UC6
+    usecase "Mengisi & Mengirim Form Kontak/Masukan" as UC4
+    usecase "Melihat Informasi Tim Penyusun (4 Anggota)" as UC5
+    usecase "Membaca Review Jurnal Lengkap\n(About, Kekuatan, Kekurangan)" as UC6
 }
 
 User --> UC1

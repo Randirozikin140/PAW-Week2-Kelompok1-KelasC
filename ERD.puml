@@ -1,5 +1,4 @@
 @startuml
-' Hide circle icons for ERD standard
 hide circle
 skinparam linetype ortho
 
@@ -7,10 +6,10 @@ entity "KELOMPOK" as Kelompok {
     * id_kelompok : INT <<PK>>
     --
     nama_kelompok : VARCHAR
-    kelas : VARCHAR
+    mata_kuliah : VARCHAR
 }
 
-entity "ANGGOTA" as Anggota {
+entity "ANGGOTA_KELOMPOK" as Anggota {
     * nim : VARCHAR <<PK>>
     --
     id_kelompok : INT <<FK>>
@@ -26,17 +25,16 @@ entity "JURNAL_REVIEW" as Jurnal {
     ringkasan : TEXT
 }
 
-entity "FEEDBACK_FORM" as Feedback {
+entity "FEEDBACK_MASUKAN" as Feedback {
     * id_feedback : INT <<PK>>
     --
     nama_pengirim : VARCHAR
-    email : VARCHAR
+    email_pengirim : VARCHAR
     subjek : VARCHAR
     pesan : TEXT
-    created_at : TIMESTAMP
 }
 
-Kelompok ||--|{ Anggota : "memiliki"
-Kelompok ||--o{ Jurnal : "menyusun review"
-Jurnal ||--o{ Feedback : "menerima masukan"
+Kelompok ||--|{ Anggota : "memiliki 4 anggota"
+Kelompok ||--o{ Jurnal : "mereview"
+Jurnal ||--o{ Feedback : "menerima masukan dari"
 @enduml

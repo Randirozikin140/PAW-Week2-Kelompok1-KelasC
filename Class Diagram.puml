@@ -1,16 +1,20 @@
 @startuml
-class Homepage {
-    +String title
-    +renderHeroSection()
+class IndexHtml {
+    +String title = "Homepage - Review Jurnal UI/UX"
+    +renderNavbarFlexbox()
+    +renderHeroGrid()
     +renderFeaturesGrid()
     +renderContactForm()
+    +renderTeamGrid()
 }
 
-class LandingPage {
-    +String journalTitle
-    +String publication
-    +renderJournalAbout()
-    +renderStrengthsAndWeaknesses()
+class LandingPageHtml {
+    +String title = "Review Jurnal UI/UX"
+    +renderHeader()
+    +renderAboutSection()
+    +renderKekuatanSection()
+    +renderKekuranganSection()
+    +renderTeamGrid()
 }
 
 class ContactForm {
@@ -18,24 +22,25 @@ class ContactForm {
     +String email
     +String subjek
     +String pesan
-    +handleSubmit()
+    +handleSubmit(event)
 }
 
 class TeamMember {
     +String nama
     +String nim
-    +displayInfo()
 }
 
-class StyleSheet {
-    +String flexLayout
+class StyleCss {
+    +String flexboxLayout
     +String gridLayout
+    +String formFocusState
     +String mediaQueryMobile
 }
 
-Homepage "1" -- "1" ContactForm : berisi >
-Homepage "1" -- "4" TeamMember : menampilkan >
-LandingPage "1" -- "4" TeamMember : menampilkan >
-Homepage ..> StyleSheet : styled by
-LandingPage ..> StyleSheet : styled by
+IndexHtml "1" *-- "1" ContactForm : memuat
+IndexHtml "1" *-- "4" TeamMember : menampilkan
+LandingPageHtml "1" *-- "4" TeamMember : menampilkan
+
+IndexHtml ..> StyleCss : terhubung ke css/style.css
+LandingPageHtml ..> StyleCss : terhubung ke css/style.css
 @enduml
