@@ -1,0 +1,183 @@
+/* --- Reset & Pengaturan Dasar --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #ffffff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.header-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0.8rem 0 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.badge {
+  background-color: #ff9800;
+  color: #ffffff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --- Navigasi Sticky --- */
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav li a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #2a5298;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+nav li a:hover {
+  background-color: #e8f0fe;
+  color: #1e3c72;
+}
+
+/* --- Layout Main --- */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  color: #1e3c72;
+  border-bottom: 3px solid #ff9800;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* --- About Section --- */
+article h3 {
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+}
+
+.metadata {
+  background-color: #f8f9fa;
+  border-left: 4px solid #2a5298;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+
+/* --- List Style (Kekuatan & Kekurangan) --- */
+.card-list {
+  list-style: none;
+}
+
+.card-list li {
+  background-color: #f8f9fa;
+  border-left: 4px solid #28a745;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.card-list.warning li {
+  border-left-color: #dc3545;
+}
+
+/* --- Anggota Kelompok Grid (4 Orang) --- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.team-card {
+  background: #f8f9fa;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-3px);
+  border-color: #2a5298;
+}
+
+.team-card h4 {
+  color: #1e3c72;
+  margin-bottom: 0.3rem;
+}
+
+.team-card p {
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+/* --- Aside --- */
+aside {
+  background-color: #eef2f7;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: #1e3c72;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+}
