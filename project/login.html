@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masuk - SakuUsaha</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="home">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html" aria-label="SakuUsaha, ke beranda">
+          <span class="logo__mark" aria-hidden="true">S</span>
+          <span class="logo__text">SakuUsaha</span>
+        </a>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <ul class="site-nav__list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="landing-page.html">Review jurnal</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container container--narrow">
+        <h1 class="section__title">Masuk ke SakuUsaha</h1>
+        <p class="section__intro">
+          Gunakan email dan password yang sudah didaftarkan.
+        </p>
+
+        <form class="form" id="form-login" novalidate>
+          <div class="form__group">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="form__group">
+            <label for="password">Password *</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+          <p
+            class="form__message"
+            id="pesan"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></p>
+          <button class="btn btn--primary btn--block" type="submit">
+            Masuk
+          </button>
+        </form>
+        <p class="form__alt">
+          Belum punya akun? <a href="register.html">Daftar dulu</a>.
+        </p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p>
+          &copy; 2026 SakuUsaha. Kelompok kelas C, Pemrograman Aplikasi Web.
+        </p>
+      </div>
+    </footer>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

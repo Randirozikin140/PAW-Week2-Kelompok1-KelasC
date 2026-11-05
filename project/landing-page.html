@@ -3,179 +3,137 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage - Review Jurnal UI/UX</title>
-    <!-- Menghubungkan ke file CSS di dalam folder css/ -->
+    <title>Review Jurnal UI/UX - Landing Page Semantic</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <!-- Ketentuan 1: Header dan Navigasi — Flexbox -->
-    <header class="navbar">
-      <div class="logo">
-        <span class="logo-text">UIUXReview</span>
+  <body class="landing">
+    <header>
+      <div class="header-container">
+        <span class="badge">Review Jurnal Ilmiah</span>
+        <h1>A Literature Review of UI/UX Design Concepts</h1>
+        <p>
+          Peran Konsep Desain UI/UX dalam Pengembangan Aplikasi Web &amp; Mobile
+        </p>
       </div>
-      <nav class="nav-links">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#features">Fitur Utama</a></li>
-          <li><a href="#contact">Hubungi Kami</a></li>
-          <li><a href="landing-page.html" class="btn-nav">Review Jurnal</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <!-- Ketentuan 2: Hero Section — CSS Grid -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1>Platform Analisis & Review Jurnal UI/UX Terpercaya</h1>
-        <p>
-          Pelajari dan telaah wawasan mendalam mengenai penerapan
-          <em>User-Centered Design</em> (UCD), dampak keberhasilan bisnis, serta
-          optimalisasi antarmuka aplikasi web dan mobile.
-        </p>
-        <div class="hero-buttons">
-          <a href="landing-page.html" class="btn-primary">Baca Review Jurnal</a>
-          <a href="#contact" class="btn-secondary">Kirim Ulasan</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <h3>Highlight Utama Jurnal</h3>
-        <ul>
+    <nav>
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#kekuatan">Kekuatan</a></li>
+        <li><a href="#kekurangan">Kekurangan</a></li>
+        <li><a href="#anggota">Anggota Kelompok</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about">
+        <h2>About / Ringkasan Jurnal</h2>
+        <article>
+          <h3>
+            A Literature Review of UI/UX Design Concepts and Their Role in Web
+            and Mobile Application Development
+          </h3>
+          <div class="metadata">
+            <p>
+              <strong>Penulis:</strong> Marsha Pelisiani, Nur Safitri Siregar,
+              Hendri Purnomo, Yunita Aprilina, Sayfuddin
+            </p>
+            <p>
+              <strong>Publikasi:</strong> Journal of SAKIRA (Vol. 4, No. 1, Juni
+              2026)
+            </p>
+          </div>
+          <p>
+            Jurnal ini menguji secara komprehensif pengaruh penerapan konsep
+            desain User Interface (UI) dan User Experience (UX) terhadap
+            <em>usability</em>, <em>user engagement</em>, retensi pengguna, dan
+            keberhasilan bisnis aplikasi digital. Menggunakan metode kualitatif
+            <em>Systematic Literature Review</em> (SLR) dengan menelaah 15
+            sumber ilmiah bereputasi serta pedoman resmi (Material Design &amp;
+            Human Interface Guidelines), penelitian ini membuktikan bahwa
+            penerapan pendekatan <em>User-Centered Design</em> (UCD) mampu
+            mengurangi <em>cognitive load</em>, meningkatkan efisiensi navigasi,
+            dan memberikan potensi tingkat pengembalian investasi (ROI) hingga
+            9.900% (setiap $1 investasi UX menghasilkan ROI hingga $100).
+          </p>
+        </article>
+      </section>
+
+      <section id="kekuatan">
+        <h2>Kekuatan Jurnal</h2>
+        <ul class="card-list">
           <li>
-            <strong>ROI UX:</strong> Potensi pengembalian investasi hingga
-            9.900%
+            <strong>Dampak Ekonomi &amp; Bisnis Komprehensif:</strong> Tidak
+            hanya mengulas fungsionalitas visual, tetapi juga mengaitkan UI/UX
+            secara kuantitatif dengan Return on Investment (ROI) dan strategi
+            pertumbuhan bisnis.
           </li>
           <li>
-            <strong>Metodologi:</strong> Systematic Literature Review (SLR)
+            <strong>Metodologi Terstruktur:</strong> Alur proses Systematic
+            Literature Review dijelaskan dengan rinci melalui 4 tahapan
+            sistematis (identifikasi, penyaringan, penilaian kelayakan, dan
+            sintesis data).
           </li>
-          <li><strong>Studi Kasus:</strong> Analisis Antarmuka Tokopedia</li>
+          <li>
+            <strong>Studi Kasus Konkret (Tokopedia):</strong> Mampu memberikan
+            gambaran nyata mengenai konsistensi antarmuka antara versi desktop
+            dan mobile app pada platform e-commerce skala besar.
+          </li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Ketentuan 3: Daftar Fitur — CSS Grid -->
-    <section id="features" class="features-section">
-      <h2 class="section-title">Fitur & Layanan Utama</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="icon">🔍</div>
-          <h3>Systematic Review</h3>
-          <p>
-            Analisis komprehensif dari 15+ literatur ilmiah bereputasi
-            internasional mengenai UI/UX.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">📊</div>
-          <h3>Metrik ROI & Bisnis</h3>
-          <p>
-            Kajian dampak desain antarmuka terhadap angka retensi pengguna dan
-            pendapatan bisnis.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">📱</div>
-          <h3>Multi-Platform Analysis</h3>
-          <p>
-            Evaluasi konsistensi desain UI/UX antara versi web desktop dan
-            aplikasi mobile.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">👥</div>
-          <h3>User-Centered Design</h3>
-          <p>
-            Penerapan kerangka kerja desain yang fokus pada kebutuhan dan
-            kenyamanan pengguna.
-          </p>
-        </div>
-      </div>
-    </section>
+      <section id="kekurangan">
+        <h2>Kekurangan Jurnal</h2>
+        <ul class="card-list warning">
+          <li>
+            <strong>Tidak Ada Pengujian Empiris Langsung:</strong> Penelitian
+            murni menggunakan studi literatur sekunder tanpa melakukan kuesioner
+            atau <em>usability testing</em> langsung kepada pengguna akhir.
+          </li>
+          <li>
+            <strong>Sampel Literatur Terbatas:</strong> Jumlah sampel literatur
+            utama yang dibedah dan disintesis secara mendalam terbatas pada 15
+            referensi terpilih.
+          </li>
+        </ul>
+      </section>
 
-    <!-- Ketentuan 4: Form dan Input — Form Styling & Focus State -->
-    <section id="contact" class="contact-section">
-      <h2 class="section-title">Formulir Kontak & Masukan</h2>
-      <p class="section-subtitle">
-        Sampaikan pertanyaan atau tanggapan Anda mengenai hasil review jurnal
-        ini.
-      </p>
+      <section id="anggota">
+        <h2>Anggota Kelompok</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <h4>Randi Rozikin</h4>
+            <p>NIM: 20240140140</p>
+          </div>
+          <div class="team-card">
+            <h4>Muhammad Fauzie Primarka</h4>
+            <p>NIM: 20240140106</p>
+          </div>
+          <div class="team-card">
+            <h4>Muh Azzam Bilal Mukarom</h4>
+            <p>NIM: 20240140130</p>
+          </div>
+          <div class="team-card">
+            <h4>Muhammad Ikhsanul Kahfi</h4>
+            <p>NIM: 20240140153</p>
+          </div>
+        </div>
+      </section>
 
-      <form class="contact-form" action="#" method="POST">
-        <div class="form-group">
-          <label for="nama">Nama Lengkap</label>
-          <input
-            type="text"
-            id="nama"
-            name="nama"
-            placeholder="Masukkan nama lengkap Anda"
-            required
-          />
-        </div>
+      <aside>
+        <p>
+          <strong>Sumber Sitasi Jurnal:</strong> Pelisiani, M., Siregar, N. S.,
+          Purnomo, H., Aprilina, Y., &amp; Sayfuddin. (2026). A Literature
+          Review of UI/UX Design Concepts and Their Role in Web and Mobile
+          Application Development. <em>Journal of SAKIRA</em>, 4(1), 28-35.
+        </p>
+      </aside>
+    </main>
 
-        <div class="form-group">
-          <label for="email">Alamat Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="contoh: nama@email.com"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="subjek">Subjek Pesan</label>
-          <input
-            type="text"
-            id="subjek"
-            name="subjek"
-            placeholder="Masukkan subjek pesan"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="pesan">Pesan / Masukan</label>
-          <textarea
-            id="pesan"
-            name="pesan"
-            rows="5"
-            placeholder="Tuliskan pesan atau ulasan Anda di sini..."
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Kirim Pesan</button>
-      </form>
-    </section>
-
-    <!-- Anggota Kelompok -->
-    <section class="team-section">
-      <h2 class="section-title">Tim Penyusun</h2>
-      <div class="team-grid">
-        <div class="team-card">
-          <h4>Randi Rozikin</h4>
-          <p>NIM: 20240140140</p>
-        </div>
-        <div class="team-card">
-          <h4>MUH AMMAD FAUZIE PRIMARKA</h4>
-          <p>NIM: 20240140106</p>
-        </div>
-        <div class="team-card">
-          <h4>MUH AZZAM BILAL MUKAROM</h4>
-          <p>NIM: 20240140130</p>
-        </div>
-        <div class="team-card">
-          <h4>Muhammad Ikhsanul Kahfi</h4>
-          <p>NIM: 20240140153</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
-      <p>
-        &copy; 2026 Kelompok - Pemrograman Aplikasi Web. All rights reserved.
-      </p>
+      <p>&copy; 2026 Kelompok - Pemrograman Aplikasi Web</p>
     </footer>
   </body>
 </html>

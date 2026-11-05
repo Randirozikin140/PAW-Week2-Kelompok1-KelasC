@@ -3,188 +3,373 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage - Review Jurnal UI/UX</title>
-    <!-- Menghubungkan ke file CSS di dalam folder css/ -->
+    <title>SakuUsaha - Catat Keuangan UMKM Tanpa Ribet</title>
+    <meta
+      name="description"
+      content="SakuUsaha membantu pemilik UMKM mencatat pemasukan dan pengeluaran dalam satu tempat."
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <!-- Ketentuan 1: Header dan Navigasi — Flexbox -->
-    <header class="navbar">
-      <div class="logo">
-        <span class="logo-text">UIUXReview</span>
+  <body class="home">
+    <!-- HEADER & NAVIGASI (Flexbox) -->
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html" aria-label="SakuUsaha, ke beranda">
+          <span class="logo__mark" aria-hidden="true">S</span>
+          <span class="logo__text">SakuUsaha</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <ul class="site-nav__list">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#fitur">Fitur</a></li>
+            <li><a href="#pengguna">Pengguna</a></li>
+            <li><a href="#catat">Catat transaksi</a></li>
+            <li><a href="#riwayat">Riwayat</a></li>
+            <li><a href="landing-page.html">Review jurnal</a></li>
+          </ul>
+        </nav>
+
+        <!-- Diganti otomatis oleh js/auth.js saat sudah login -->
+        <div class="site-header__cta auth-slot" id="auth-slot">
+          <a class="btn btn--ghost" href="login.html">Masuk</a>
+          <a class="btn btn--primary" href="register.html">Daftar</a>
+        </div>
       </div>
-      <nav class="nav-links">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#features">Fitur Utama</a></li>
-          <li><a href="#contact">Hubungi Kami</a></li>
-          <li><a href="landing-page.html" class="btn-nav">Review Jurnal</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <!-- Ketentuan 2: Hero Section — CSS Grid -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1>Platform Analisis & Review Jurnal UI/UX Terpercaya</h1>
+    <main>
+      <!-- HERO (CSS Grid: teks + kartu) -->
+      <section class="hero" id="beranda">
+        <div class="hero__grid">
+          <div class="hero__text">
+            <h1>
+              Uang masuk dan keluar usaha, tercatat rapi dalam satu tempat.
+            </h1>
+            <p class="hero__lead">
+              SakuUsaha membantu pemilik warung dan usaha rumahan mencatat
+              transaksi harian, lalu langsung melihat saldo dan keuntungan
+              usahanya. Cukup beberapa ketukan, tanpa istilah akuntansi yang
+              rumit.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#catat"
+                >Catat transaksi pertama</a
+              >
+              <a class="btn btn--ghost" href="#fitur">Lihat fitur</a>
+            </div>
+            <p class="hero__note">
+              Target awal: satu transaksi tercatat dalam 60 detik.
+            </p>
+          </div>
+
+          <!-- Kartu ringkasan: berisi contoh sampai pengguna masuk, lalu diisi data asli -->
+          <aside class="ledger" aria-label="Ringkasan keuangan">
+            <h2 class="ledger__title">Ringkasan keuangan</h2>
+            <p class="ledger__sub" id="ledger-sub">
+              Warung Bu Rina (contoh data, masuk untuk melihat data Anda)
+            </p>
+            <dl class="ledger__rows">
+              <div class="ledger__row">
+                <dt>Pemasukan</dt>
+                <dd class="in" id="sum-in">Rp 4.850.000</dd>
+              </div>
+              <div class="ledger__row">
+                <dt>Pengeluaran</dt>
+                <dd class="out" id="sum-out">Rp 3.120.000</dd>
+              </div>
+              <div class="ledger__row ledger__row--total">
+                <dt>Saldo</dt>
+                <dd id="sum-saldo">Rp 1.730.000</dd>
+              </div>
+            </dl>
+            <p class="ledger__foot" id="ledger-foot">
+              Transaksi terakhir: Belanja minyak goreng, Rp 85.000
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <!-- DAFTAR FITUR (CSS Grid) -->
+      <section class="section" id="fitur">
+        <div class="container">
+          <h2 class="section__title">Fitur yang ada di versi pertama</h2>
+          <p class="section__intro">
+            Disusun dari daftar kebutuhan pada PRD. Fitur wajib dikerjakan lebih
+            dulu, sisanya menyusul setelah fungsi inti berjalan.
+          </p>
+
+          <ul class="feature-grid">
+            <li class="feature">
+              <span class="tag tag--must">Wajib</span>
+              <h3>Catat pemasukan</h3>
+              <p>
+                Simpan uang yang diterima usaha lengkap dengan nominal, tanggal,
+                dan kategori.
+              </p>
+            </li>
+            <li class="feature">
+              <span class="tag tag--must">Wajib</span>
+              <h3>Catat pengeluaran</h3>
+              <p>
+                Rekam biaya bahan dan operasional agar saldo bersih selalu
+                terlihat.
+              </p>
+            </li>
+            <li class="feature">
+              <span class="tag tag--must">Wajib</span>
+              <h3>Ringkasan keuangan</h3>
+              <p>
+                Total pemasukan, pengeluaran, dan saldo untuk periode yang
+                dipilih.
+              </p>
+            </li>
+            <li class="feature">
+              <span class="tag tag--must">Wajib</span>
+              <h3>Validasi input</h3>
+              <p>
+                Pesan kesalahan yang jelas saat data belum lengkap atau nominal
+                tidak valid.
+              </p>
+            </li>
+            <li class="feature">
+              <span class="tag tag--should">Penting</span>
+              <h3>Riwayat dan filter</h3>
+              <p>
+                Cari transaksi lama berdasarkan rentang tanggal atau jenis
+                transaksi.
+              </p>
+            </li>
+            <li class="feature">
+              <span class="tag tag--should">Penting</span>
+              <h3>Edit dan hapus</h3>
+              <p>
+                Perbaiki catatan yang keliru. Penghapusan selalu meminta
+                konfirmasi dulu.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Persona -->
+      <section class="section section--tint" id="pengguna">
+        <div class="container">
+          <h2 class="section__title">Dibuat untuk siapa</h2>
+          <div class="persona-grid">
+            <article class="persona">
+              <h3>Bu Rina, pemilik warung</h3>
+              <p>
+                Mengelola warung sendiri dan transaksinya banyak setiap hari. Ia
+                butuh mencatat belanja dan uang masuk dengan cepat, lalu tahu
+                saldo usahanya.
+              </p>
+            </article>
+            <article class="persona">
+              <h3>Mas Dimas, usaha makanan rumahan</h3>
+              <p>
+                Menerima pesanan harian dan perlu membedakan uang masuk dari
+                biaya bahan. Ia ingin membandingkan pemasukan dengan pengeluaran
+                dari riwayat transaksi.
+              </p>
+            </article>
+          </div>
+
+          <h3 class="subhead">Prinsip UI/UX dari jurnal yang kami pakai</h3>
+          <ul class="principle-list">
+            <li>
+              <strong>Berpusat pada pengguna.</strong> Alur dirancang dari
+              kebiasaan pemilik UMKM.
+            </li>
+            <li>
+              <strong>Navigasi sederhana.</strong> Fitur utama dapat dijangkau
+              dalam beberapa ketukan.
+            </li>
+            <li>
+              <strong>Konsisten.</strong> Warna, ikon, dan tata letak sama di
+              setiap halaman.
+            </li>
+            <li>
+              <strong>Umpan balik jelas.</strong> Setiap simpan berhasil atau
+              gagal selalu diberi tahu.
+            </li>
+          </ul>
+          <p class="section__intro">
+            Dasar teorinya ada di
+            <a href="landing-page.html">review jurnal kelompok kami</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- FORM TRANSAKSI (label jelas + focus state, terhubung ke API) -->
+      <section class="section" id="catat">
+        <div class="container container--narrow">
+          <h2 class="section__title">Catat transaksi</h2>
+          <p class="section__intro">Kolom bertanda * wajib diisi.</p>
+
+          <p class="notice" id="info-login" hidden>
+            Anda belum masuk. <a href="login.html">Masuk</a> atau
+            <a href="register.html">daftar</a> dulu agar transaksi bisa
+            disimpan.
+          </p>
+
+          <form class="form" id="form-transaksi" novalidate>
+            <input type="hidden" id="transaksi-id" name="id" />
+
+            <fieldset class="form__group form__group--choice">
+              <legend>Jenis transaksi *</legend>
+              <label class="choice">
+                <input type="radio" name="jenis" value="pemasukan" checked />
+                <span>Pemasukan</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="jenis" value="pengeluaran" />
+                <span>Pengeluaran</span>
+              </label>
+            </fieldset>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label for="nominal">Nominal (Rp) *</label>
+                <input
+                  type="number"
+                  id="nominal"
+                  name="nominal"
+                  min="1"
+                  step="1"
+                  inputmode="numeric"
+                  placeholder="Contoh: 50000"
+                />
+              </div>
+
+              <div class="form__group">
+                <label for="tanggal">Tanggal *</label>
+                <input type="date" id="tanggal" name="tanggal" />
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label for="kategori">Kategori *</label>
+              <select id="kategori" name="kategori">
+                <option value="">Pilih kategori</option>
+                <option>Penjualan</option>
+                <option>Bahan baku</option>
+                <option>Operasional</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="catatan">Catatan (opsional)</label>
+              <textarea
+                id="catatan"
+                name="catatan"
+                rows="3"
+                maxlength="200"
+                placeholder="Contoh: beli telur 2 kg"
+              ></textarea>
+            </div>
+
+            <p
+              class="form__message"
+              id="pesan-transaksi"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></p>
+
+            <div class="form__actions">
+              <button class="btn btn--primary" id="tombol-simpan" type="submit">
+                Simpan transaksi
+              </button>
+              <button
+                class="btn btn--ghost"
+                id="tombol-batal"
+                type="button"
+                hidden
+              >
+                Batal ubah
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- RIWAYAT TRANSAKSI -->
+      <section class="section section--tint" id="riwayat">
+        <div class="container">
+          <h2 class="section__title">Riwayat transaksi</h2>
+
+          <form class="form filter" id="form-filter">
+            <div class="form__group">
+              <label for="filter-dari">Dari tanggal</label>
+              <input type="date" id="filter-dari" name="dari" />
+            </div>
+            <div class="form__group">
+              <label for="filter-sampai">Sampai tanggal</label>
+              <input type="date" id="filter-sampai" name="sampai" />
+            </div>
+            <div class="form__group">
+              <label for="filter-jenis">Jenis</label>
+              <select id="filter-jenis" name="jenis">
+                <option value="">Semua</option>
+                <option value="pemasukan">Pemasukan</option>
+                <option value="pengeluaran">Pengeluaran</option>
+              </select>
+            </div>
+            <button class="btn btn--primary" type="submit">
+              Terapkan filter
+            </button>
+          </form>
+
+          <div class="table-wrap">
+            <table class="tabel">
+              <thead>
+                <tr>
+                  <th scope="col">Tanggal</th>
+                  <th scope="col">Jenis</th>
+                  <th scope="col">Kategori</th>
+                  <th scope="col">Catatan</th>
+                  <th scope="col" class="tabel__angka">Nominal</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="daftar-transaksi"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
         <p>
-          Pelajari dan telaah wawasan mendalam mengenai penerapan
-          <em>User-Centered Design</em> (UCD), dampak keberhasilan bisnis, serta
-          optimalisasi antarmuka aplikasi web dan mobile.
+          &copy; 2026 SakuUsaha. Kelompok kelas C, Pemrograman Aplikasi Web.
         </p>
-        <div class="hero-buttons">
-          <a href="landing-page.html" class="btn-primary">Baca Review Jurnal</a>
-          <a href="#contact" class="btn-secondary">Kirim Ulasan</a>
-        </div>
+        <p>
+          Muhammad Fauzie Primarka, Muhammad Ikhsanul Kahfi, Randi Rozikin,
+          Bilal Azam
+        </p>
       </div>
-      <div class="hero-card">
-        <h3>Highlight Utama Jurnal</h3>
-        <ul>
-          <li>
-            <strong>ROI UX:</strong> Potensi pengembalian investasi hingga
-            9.900%
-          </li>
-          <li>
-            <strong>Metodologi:</strong> Systematic Literature Review (SLR)
-          </li>
-          <li><strong>Studi Kasus:</strong> Analisis Antarmuka Tokopedia</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Ketentuan 3: Daftar Fitur — CSS Grid -->
-    <section id="features" class="features-section">
-      <h2 class="section-title">Fitur & Layanan Utama</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="icon">🔍</div>
-          <h3>Systematic Review</h3>
-          <p>
-            Analisis komprehensif dari 15+ literatur ilmiah bereputasi
-            internasional mengenai UI/UX.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">📊</div>
-          <h3>Metrik ROI & Bisnis</h3>
-          <p>
-            Kajian dampak desain antarmuka terhadap angka retensi pengguna dan
-            pendapatan bisnis.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">📱</div>
-          <h3>Multi-Platform Analysis</h3>
-          <p>
-            Evaluasi konsistensi desain UI/UX antara versi web desktop dan
-            aplikasi mobile.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">👥</div>
-          <h3>User-Centered Design</h3>
-          <p>
-            Penerapan kerangka kerja desain yang fokus pada kebutuhan dan
-            kenyamanan pengguna.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ketentuan 4: Form dan Input — Form Styling & Focus State -->
-    <section id="contact" class="contact-section">
-      <h2 class="section-title">Formulir Kontak & Masukan</h2>
-      <p class="section-subtitle">
-        Sampaikan pertanyaan atau tanggapan Anda mengenai hasil review jurnal
-        ini.
-      </p>
-
-      <!-- ✅ KODE BARU (Aman untuk Live Server & HTML Statis) -->
-      <form
-        class="contact-form"
-        action=""
-        method="GET"
-        onsubmit="
-          event.preventDefault();
-          alert('Pesan Anda berhasil dikirim!');
-        "
-      >
-        <div class="form-group">
-          <label for="nama">Nama Lengkap</label>
-          <input
-            type="text"
-            id="nama"
-            name="nama"
-            placeholder="Masukkan nama lengkap Anda"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Alamat Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="contoh: nama@email.com"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="subjek">Subjek Pesan</label>
-          <input
-            type="text"
-            id="subjek"
-            name="subjek"
-            placeholder="Masukkan subjek pesan"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="pesan">Pesan / Masukan</label>
-          <textarea
-            id="pesan"
-            name="pesan"
-            rows="5"
-            placeholder="Tuliskan pesan atau ulasan Anda di sini..."
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">Kirim Pesan</button>
-      </form>
-    </section>
-
-    <!-- Anggota Kelompok -->
-    <section class="team-section">
-      <h2 class="section-title">Tim Penyusun</h2>
-      <div class="team-grid">
-        <div class="team-card">
-          <h4>Randi Rozikin</h4>
-          <p>NIM: 20240140140</p>
-        </div>
-        <div class="team-card">
-          <h4>MUH AMMAD FAUZIE PRIMARKA</h4>
-          <p>NIM: 20240140106</p>
-        </div>
-        <div class="team-card">
-          <h4>MUH AZZAM BILAL MUKAROM</h4>
-          <p>NIM: 20240140130</p>
-        </div>
-        <div class="team-card">
-          <h4>Muhammad Ikhsanul Kahfi</h4>
-          <p>NIM: 20240140153</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>
-        &copy; 2026 Kelompok - Pemrograman Aplikasi Web. All rights reserved.
-      </p>
     </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/transaksi.js"></script>
+    <script>
+      // Penjaga: jika js/transaksi.js tidak termuat, tampilkan peringatan
+      // dan cegah form mengirim data ke URL halaman (GET ?dari=...).
+      window.addEventListener("load", function () {
+        if (document.body.dataset.transaksiSiap) return;
+        var info = document.getElementById("info-login");
+        info.hidden = false;
+        info.textContent =
+          "Peringatan: file js/transaksi.js tidak termuat. Pastikan file itu ada di folder js/ lalu muat ulang dengan Ctrl+F5.";
+        ["form-transaksi", "form-filter"].forEach(function (id) {
+          document.getElementById(id).addEventListener("submit", function (e) {
+            e.preventDefault();
+          });
+        });
+      });
+    </script>
   </body>
 </html>
